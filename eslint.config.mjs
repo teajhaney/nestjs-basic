@@ -31,6 +31,8 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-argument': 'off',
       '@typescript-eslint/no-unsafe-assignemt': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
+      'no-unused-vars': 'off',
+      '@typeScript-eslint/no-unused-vars': 'error',
     },
   },
 );

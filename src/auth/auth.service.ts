@@ -15,7 +15,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  //handle new user registration
+  //HANDLE new user registration
   async signup(registerDto: RegisterDto) {
     const { email, password } = registerDto;
     //check if user exists
@@ -43,7 +43,7 @@ export class AuthService {
     return result;
   }
 
-  //handle user sign in
+  //HANDLE user sign in
   async signin(loginDto: LoginDto) {
     const { email, password } = loginDto;
     //check if user exists
@@ -59,7 +59,7 @@ export class AuthService {
     }
 
     //check if password is correct
-    const isPasswordValid = await bcrypt.compare(password, user!.password);
+    const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
       throw new UnauthorizedException(
