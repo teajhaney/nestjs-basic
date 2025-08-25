@@ -5,6 +5,7 @@ import { BlogModule } from './blog/blog.module';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
+import { DestinationsModule } from './destinations/destinations.module';
 
 //root module which import other modules, controllers, and providers
 //module group related providers and controllers together
@@ -14,6 +15,7 @@ import { AuthModule } from './auth/auth.module';
     BlogModule,
     PrismaModule,
     AuthModule,
+    DestinationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
